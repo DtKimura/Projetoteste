@@ -1,9 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using Projetoteste.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+
+builder.Services.AddDbContext<AppDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("defaultConnection")));
 
 var app = builder.Build();
 
