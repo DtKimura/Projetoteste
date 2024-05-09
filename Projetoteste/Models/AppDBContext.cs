@@ -8,5 +8,7 @@ namespace Projetoteste.Models
 
         public DbSet<Veículo> Veículos { get; set; }
 
+        public DbSet<consumos> Consumos { get; set; }
+
     }
 }

@@ -22,5 +22,7 @@ namespace Projetoteste.Models
         [Required(ErrorMessage = "Obrigatório informar o ano")]
         [Display(Name = "Ano do modelo")]
         public int AnoModelo { get; set; }
+
+        public ICollection<consumos> Consumos { get; set; } 
     }
 }
